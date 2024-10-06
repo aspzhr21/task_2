@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Google Font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <div class="info">
+                <label for="username"><strong>Username:</strong></label>
+                <input type="text" id="username" name="username" placeholder="Masukkan Username" required>
+
+                <label for="password"><strong>Password:</strong></label>
+                <input type="password" id="password" name="password" placeholder="Masukkan Password" required>
+
+                <button type="submit">Masuk</button>
+            </div>
+        </form>
+
+        <div class="footer">
+            <p>&copy; 2024 - Login Page</p>
+        </div>
+    </div>
+
+    <script>
+        // Event untuk submit form
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Proses validasi sederhana
+            if (username === "admin" && password === "admin123") {
+                alert("Login berhasil!");
+                // Anda dapat mengarahkan ke halaman lain menggunakan: window.location.href = "dashboard.html";
+            } else {
+                alert("Username atau password salah!");
+            }
+        });
+    </script>
+
+</body>
+</html>
